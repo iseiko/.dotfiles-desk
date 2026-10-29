@@ -1,0 +1,11 @@
+{
+  "base":    "#18130b",
+  "surface": "#241f17",
+  "overlay": "#2f2921",
+  "text":    "#ede1d4",
+  "subtext": "#d2c4b4",
+  "muted":   "#9b8f80",
+  "accent":  "#f2be6e",
+  "danger":  "#ffb4ab",
+  "success": "#b1d18a"
+}

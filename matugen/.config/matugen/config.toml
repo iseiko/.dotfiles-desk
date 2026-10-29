@@ -1,0 +1,10 @@
+[config.custom_colors]
+success = { color = "#a6e3a1", blend = true }
+
+[templates.quickshell]
+input_path  = '~/.config/matugen/templates/colors.json'
+output_path = '~/.config/quickshell/colors.json'
+
+[templates.hyprland]
+input_path  = '~/.config/matugen/templates/hyprland-colors.lua'
+output_path = '~/.config/hypr/matugen-colors.lua'

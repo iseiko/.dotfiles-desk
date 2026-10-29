@@ -1,0 +1,87 @@
+
+$schema: https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+version: 4
+console_title_template: '{{ .Folder }}'
+
+transient_prompt:
+  background: transparent
+  foreground: white
+  template: ' '
+
+blocks:
+  - type: prompt
+    alignment: left
+    newline: true
+    segments:
+      - type: session
+        foreground: white
+        template: '{{ .UserName }} '
+      
+      - type: git
+        foreground: yellow
+        style: diamond
+        template: '<white>{{ .UpstreamIcon }}</>{{ .HEAD }} '
+        properties:
+          branch_icon: '  '
+          fetch_status: true
+          fetch_upstream_icon: true
+      
+      - type: session
+        foreground: blue
+        style: powerline
+        template: '<white>  </> {{ .HostName }} '
+
+  - type: prompt
+    alignment: right
+    segments:
+      - type: text
+        foreground: white
+        style: plain
+      
+      - type: executiontime
+        foreground: white
+        style: diamond
+        template: ' <cyan>{{ .FormattedMs }}s</> <white>  </>'
+        properties:
+          style: dallas
+          threshold: 0
+      
+      - type: root
+        style: diamond
+        template: '  '
+        properties:
+          root_icon: '  '
+      
+      - type: node
+        foreground: cyan
+        style: diamond
+        template: ' <white>  </> {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} '
+
+  - type: prompt
+    alignment: left
+    newline: true
+    segments:
+      - type: path
+        foreground: darkGray
+        leading_diamond: '<darkGray>>=></>'
+        trailing_diamond: ''
+        style: diamond
+        template: '  {{ .Path }}'
+        properties:
+          folder_icon: /
+          folder_separator_icon: ' / '
+          home_icon: home
+          style: agnoster_full
+
+  - type: prompt
+    alignment: left
+    newline: true
+    segments:
+      - type: status
+        foreground: cyan
+        style: plain
+        template: ' -> '
+        foreground_templates:
+          - '{{ if gt .Code 0 }}white{{ end }}'
+        properties:
+          always_enabled: true
