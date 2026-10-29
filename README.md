@@ -125,7 +125,7 @@ See [`hypr/modules/binds.lua`](https://claude.ai/chat/.config/hypr/modules/binds
 
 <h2 align='center'>Notes</h2>
 
-- `quickshell/temp.qml` looks like a scratch file; consider removing it or adding it to `.gitignore`.
+- `quickshell/temp.qml` is a scratch file; consider removing it.
     
 - The zsh plugins are vendored in `zsh/plugins/`. To keep the repo small and always up to date, you can replace them with git submodules:
     
