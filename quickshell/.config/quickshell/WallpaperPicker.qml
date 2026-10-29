@@ -1,6 +1,7 @@
 import Quickshell
 import Quickshell.Io
 import Quickshell.Wayland
+import Quickshell.Hyprland
 import QtQuick
 import Qt.labs.folderlistmodel
 
@@ -29,6 +30,13 @@ Scope {
     function toggle(): void { root.open = !root.open }
   }
 
+  // Handle focus grab
+  HyprlandFocusGrab {
+    windows: [ wall]
+    active: root.open
+    onCleared: root.open = false
+  }
+
   // The command that will run when you select the wallpaper
   Process {
     id: setWall
@@ -50,6 +58,7 @@ Scope {
   }
 
   PanelWindow {
+    id: wall
     // Stay visible until the closing animation has finished
     visible: root.open || card.progress > 0
     anchors { bottom: true; left: true; right: true }
@@ -57,9 +66,15 @@ Scope {
     implicitHeight: card.height + card.gap
     color: "transparent"
     exclusionMode: ExclusionMode.Ignore
+    WlrLayershell.layer: WlrLayer.Overlay
     // Exclusive while open, so the arrow keys work without clicking first
     WlrLayershell.keyboardFocus: root.open ? WlrKeyboardFocus.Exclusive
                                            : WlrKeyboardFocus.None
+
+    MouseArea {
+      anchors.fill: parent
+      onClicked: root.open = false
+    }
 
     Rectangle {
       id: card

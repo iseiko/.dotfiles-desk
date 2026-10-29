@@ -13,7 +13,7 @@ Scope {
     { label: "Lock",      icon: "󰌾", cmd: ["qs", "ipc", "call", "lock", "lock"] },
     { label: "Suspend",   icon: "󰤄", cmd: ["systemctl", "suspend"] },
     { label: "Hibernate", icon: "󰋊", cmd: ["systemctl", "hibernate"] },
-    { label: "Reboot",    icon: "󰜉", cmd: ["systemctl", "reboot"] },
+    { label: "Reboot",    icon: "󰜉", cmd: ["systemctl", "soft-reboot"] },
     { label: "Shutdown",  icon: "󰐥", cmd: ["systemctl", "poweroff"] }
   ]
 
