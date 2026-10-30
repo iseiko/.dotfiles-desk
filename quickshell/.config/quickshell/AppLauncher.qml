@@ -68,7 +68,8 @@ Scope {
       height: 650
       anchors.horizontalCenter: parent.horizontalCenter
       anchors.bottom: parent.bottom
-      radius: 16
+      topLeftRadius: 16
+      topRightRadius: 16
       color: Theme.base
       // no border so it blends with the bar thats on the back of the card 
       border.width: 0
@@ -77,7 +78,7 @@ Scope {
 
       // space between the card and the bottom edge of the screen similar to what microsoft does
       // (48 leaves your bar visible; set to 0 to sit flush against the edge)
-      property real gap: 0
+      property real gap: 40
 
       // 0 = hidden below the screen, 1 = fully shown
       property real progress: root.open ? 1 : 0

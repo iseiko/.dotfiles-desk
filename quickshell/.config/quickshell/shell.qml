@@ -8,4 +8,5 @@ ShellRoot {
   PowerMenu { id: powerMenu } // This function show the logout menu
   Bar { launcher: launcher; powerMenu: powerMenu } // This function holds the taskbar
   Lock {} // This function call the lockscreen
+  // Music {}
 }

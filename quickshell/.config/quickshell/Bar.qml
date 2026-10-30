@@ -27,7 +27,6 @@ Scope {
   }
 
   // The base for the whole bar, its where all the modules are located
-
   PanelWindow {
     anchors { bottom: true; left: true; right: true }
     implicitHeight: 40
@@ -59,7 +58,6 @@ Scope {
       }
 
       // Workspace row (NEED TO ADD CLICKABLE WORKSPACE BUTTON)
-
       Row {
         anchors.verticalCenter: parent.verticalCenter
         spacing: 4
@@ -108,7 +106,7 @@ Scope {
         font.bold: true
       }
       Text {
-        text: Qt.formatDateTime(clock.date, "ddd, dd MMM yyyy")
+        text: Qt.formatDateTime(clock.date, "ddd, dd MMM")
         color: Theme.subtext
         font.pixelSize: 15
       }

@@ -136,6 +136,20 @@ See [`hypr/modules/binds.lua`](https://claude.ai/chat/.config/hypr/modules/binds
     git submodule add https://github.com/jeffreytse/zsh-vi-mode .config/zsh/plugins/zsh-vi-mode
     ```
     
+<h2 align='center'>To Do</h2>
+
+[ ] Add icons to the main bar
+
+[ ] Fix wallpaper rounding on wallpaper chooser script
+
+[ ] Fix animation of the app launcher
+
+[ ] Add bluetooth and wifi connection center
+
+[ ] Add bluetooth and wifi to the bar
+
+[ ] Add scrolling layout 
+
 
 <h2 align='center'>Credits</h2>
 
